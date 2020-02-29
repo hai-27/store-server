@@ -223,64 +223,64 @@ values
 
 insert into product_picture
 values
-  (null, 23, "public/imgs/phone/picture/charger-10000mAh-1.jpg", null),
-  (null, 23, "public/imgs/phone/picture/charger-10000mAh-2.jpg", null),
-  (null, 23, "public/imgs/phone/picture/charger-10000mAh-3.jpg", null),
-  (null, 23, "public/imgs/phone/picture/charger-10000mAh-4.jpg", null),
-  (null, 23, "public/imgs/phone/picture/charger-10000mAh-5.jpg", null);
+  (null, 23, "public/imgs/phone/picture/charger-30w-1.jpg", null),
+  (null, 23, "public/imgs/phone/picture/charger-30w-2.jpg", null),
+  (null, 23, "public/imgs/phone/picture/charger-30w-3.jpg", null),
+  (null, 23, "public/imgs/phone/picture/charger-30w-4.jpg", null);
 
 insert into product_picture
 values
-  (null, 24, "public/imgs/phone/picture/charger-30w-1.jpg", null),
-  (null, 24, "public/imgs/phone/picture/charger-30w-2.jpg", null),
-  (null, 24, "public/imgs/phone/picture/charger-30w-3.jpg", null),
-  (null, 24, "public/imgs/phone/picture/charger-30w-4.jpg", null);
+  (null, 24, "public/imgs/phone/picture/charger-18w-1.jpg", null),
+  (null, 24, "public/imgs/phone/picture/charger-18w-2.jpg", null),
+  (null, 24, "public/imgs/phone/picture/charger-18w-3.jpg", null);
 
 insert into product_picture
 values
-  (null, 25, "public/imgs/phone/picture/charger-18w-1.jpg", null),
-  (null, 25, "public/imgs/phone/picture/charger-18w-2.jpg", null),
-  (null, 25, "public/imgs/phone/picture/charger-18w-3.jpg", null);
+  (null, 25, "public/imgs/phone/picture/charger-60w-1.jpg", null),
+  (null, 25, "public/imgs/phone/picture/charger-60w-2.jpg", null),
+  (null, 25, "public/imgs/phone/picture/charger-60w-3.jpg", null),
+  (null, 25, "public/imgs/phone/picture/charger-60w-4.jpg", null);
 
 insert into product_picture
 values
-  (null, 26, "public/imgs/phone/picture/charger-60w-1.jpg", null),
-  (null, 26, "public/imgs/phone/picture/charger-60w-2.jpg", null),
-  (null, 26, "public/imgs/phone/picture/charger-60w-3.jpg", null),
-  (null, 26, "public/imgs/phone/picture/charger-60w-4.jpg", null);
+  (null, 26, "public/imgs/phone/picture/charger-36w-1.jpg", null),
+  (null, 26, "public/imgs/phone/picture/charger-36w-2.jpg", null),
+  (null, 26, "public/imgs/phone/picture/charger-36w-3.jpg", null),
+  (null, 26, "public/imgs/phone/picture/charger-36w-4.jpg", null),
+  (null, 26, "public/imgs/phone/picture/charger-36w-5.jpg", null);
 
 insert into product_picture
 values
-  (null, 27, "public/imgs/phone/picture/charger-36w-1.jpg", null),
-  (null, 27, "public/imgs/phone/picture/charger-36w-2.jpg", null),
-  (null, 27, "public/imgs/phone/picture/charger-36w-3.jpg", null),
-  (null, 27, "public/imgs/phone/picture/charger-36w-4.jpg", null),
-  (null, 27, "public/imgs/phone/picture/charger-36w-5.jpg", null);
+  (null, 27, "public/imgs/phone/picture/charger-car-1.jpg", null),
+  (null, 27, "public/imgs/phone/picture/charger-car-2.jpg", null),
+  (null, 27, "public/imgs/phone/picture/charger-car-3.jpg", null),
+  (null, 27, "public/imgs/phone/picture/charger-car-4.jpg", null),
+  (null, 27, "public/imgs/phone/picture/charger-car-5.jpg", null),
+  (null, 27, "public/imgs/phone/picture/charger-car-6.jpg", null);
 
 insert into product_picture
 values
-  (null, 28, "public/imgs/phone/picture/charger-car-1.jpg", null),
-  (null, 28, "public/imgs/phone/picture/charger-car-2.jpg", null),
-  (null, 28, "public/imgs/phone/picture/charger-car-3.jpg", null),
-  (null, 28, "public/imgs/phone/picture/charger-car-4.jpg", null),
-  (null, 28, "public/imgs/phone/picture/charger-car-5.jpg", null),
-  (null, 28, "public/imgs/phone/picture/charger-car-6.jpg", null);
+  (null, 28, "public/imgs/phone/picture/charger-car-37w-1.jpg", null),
+  (null, 28, "public/imgs/phone/picture/charger-car-37w-2.jpg", null),
+  (null, 28, "public/imgs/phone/picture/charger-car-37w-3.jpg", null),
+  (null, 28, "public/imgs/phone/picture/charger-car-37w-4.jpg", null),
+  (null, 28, "public/imgs/phone/picture/charger-car-37w-5.jpg", null);
 
 insert into product_picture
 values
-  (null, 29, "public/imgs/phone/picture/charger-car-37w-1.jpg", null),
-  (null, 29, "public/imgs/phone/picture/charger-car-37w-2.jpg", null),
-  (null, 29, "public/imgs/phone/picture/charger-car-37w-3.jpg", null),
-  (null, 29, "public/imgs/phone/picture/charger-car-37w-4.jpg", null),
-  (null, 29, "public/imgs/phone/picture/charger-car-37w-5.jpg", null);
+  (null, 29, "public/imgs/phone/picture/charger-tio-1.jpg", null),
+  (null, 29, "public/imgs/phone/picture/charger-tio-2.jpg", null),
+  (null, 29, "public/imgs/phone/picture/charger-tio-3.jpg", null),
+  (null, 29, "public/imgs/phone/picture/charger-tio-4.jpg", null),
+  (null, 29, "public/imgs/phone/picture/charger-tio-5.jpg", null);
 
 insert into product_picture
 values
-  (null, 30, "public/imgs/phone/picture/charger-tio-1.jpg", null),
-  (null, 30, "public/imgs/phone/picture/charger-tio-2.jpg", null),
-  (null, 30, "public/imgs/phone/picture/charger-tio-3.jpg", null),
-  (null, 30, "public/imgs/phone/picture/charger-tio-4.jpg", null),
-  (null, 30, "public/imgs/phone/picture/charger-tio-5.jpg", null);
+  (null, 30, "public/imgs/phone/picture/charger-10000mAh-1.jpg", null),
+  (null, 30, "public/imgs/phone/picture/charger-10000mAh-2.jpg", null),
+  (null, 30, "public/imgs/phone/picture/charger-10000mAh-3.jpg", null),
+  (null, 30, "public/imgs/phone/picture/charger-10000mAh-4.jpg", null),
+  (null, 30, "public/imgs/phone/picture/charger-10000mAh-5.jpg", null);
 
 insert into product_picture
 values
