@@ -3,7 +3,7 @@
  * @Author: hai-27
  * @Date: 2020-02-07 16:51:56
  * @LastEditors: hai-27
- * @LastEditTime: 2020-02-25 22:37:06
+ * @LastEditTime: 2020-03-01 15:21:46
  */
 const Router = require('koa-router');
 const userController = require('../controllers/userController')
@@ -11,8 +11,8 @@ const userController = require('../controllers/userController')
 let userRouter = new Router();
 
 userRouter
-  .post('/user/login', userController.Login)
-  .post('/user/findUserName', userController.FindUserName)
-  .post('/user/register', userController.Register)
+  .post('/users/login', userController.Login)
+  .post('/users/findUserName', userController.FindUserName)
+  .post('/users/register', userController.Register)
 
 module.exports = userRouter;

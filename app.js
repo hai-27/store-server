@@ -2,7 +2,7 @@
  * @Author: hai-27
  * @Date: 2020-02-07 16:51:56
  * @LastEditors: hai-27
- * @LastEditTime: 2020-02-27 15:59:37
+ * @LastEditTime: 2020-03-01 15:35:07
  */
 const Koa = require('koa');
 const KoaStatic = require('koa-static');
@@ -66,7 +66,7 @@ app.use(Session(CONFIG, app));
 
 // 判断是否登录
 app.use(async (ctx, next) => {
-  if (ctx.url.startsWith('/user/shoppingCart') || ctx.url.startsWith('/user/order')) {
+  if (ctx.url.startsWith('/user/')) {
     if (!ctx.session.user) {
       ctx.body = {
         code: '401',
