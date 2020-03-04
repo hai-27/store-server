@@ -2,7 +2,7 @@
  * @Author: hai-27
  * @Date: 2020-02-07 16:51:56
  * @LastEditors: hai-27
- * @LastEditTime: 2020-03-01 15:35:07
+ * @LastEditTime: 2020-03-04 22:29:53
  */
 const Koa = require('koa');
 const KoaStatic = require('koa-static');
@@ -104,11 +104,13 @@ const resourcesRouter = require('./app/router/resourcesRouter');
 const productRouter = require('./app/router/productRouter');
 const shoppingCartRouter = require('./app/router/shoppingCartRouter');
 const orderRouter = require('./app/router/orderRouter');
+const collectRouter = require('./app/router/collectRouter');
 app.use(userRouter.routes());
 app.use(resourcesRouter.routes());
 app.use(productRouter.routes());
 app.use(shoppingCartRouter.routes());
 app.use(orderRouter.routes());
+app.use(collectRouter.routes());
 
 app.use(userRouter.allowedMethods());
 

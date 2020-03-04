@@ -3,7 +3,7 @@
  * @Author: hai-27
  * @Date: 2020-02-07 16:51:58
  * @LastEditors: hai-27
- * @LastEditTime: 2020-02-28 23:39:16
+ * @LastEditTime: 2020-03-04 22:26:03
  */
 create database storeDB;
 use storeDB;
@@ -70,4 +70,12 @@ create table orders(
   order_time bigint not null,
   constraint FK_order_user_id foreign key (user_id) references users (user_id),
   constraint FK_order_id foreign key (product_id) references product (product_id)
+);
+create table collect(
+  id int primary key auto_increment,
+  user_id int not null,
+  product_id int not null,
+  collect_time bigint not null,
+  constraint FK_collect_user_id foreign key (user_id) references users (user_id),
+  constraint FK_collect_id foreign key (product_id) references product (product_id)
 );
