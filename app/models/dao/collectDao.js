@@ -3,7 +3,7 @@
  * @Author: hai-27
  * @Date: 2020-03-04 22:33:56
  * @LastEditors: hai-27
- * @LastEditTime: 2020-03-04 23:26:03
+ * @LastEditTime: 2020-03-10 17:50:37
  */
 const db = require('./db.js');
 
@@ -15,7 +15,7 @@ module.exports = {
   },
   // 连接数据库,获取用户的所有收藏商品信息
   GetCollect: async (user_id) => {
-    const sql = 'select * from collect';
+    const sql = 'select * from collect where user_id=?';
     return await db.query(sql, user_id);
   },
   // 连接数据库,获取用户的某个收藏商品信息
