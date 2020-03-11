@@ -8,7 +8,7 @@
 
 ## 接口文档
 
-[接口文档](https://github.com/hai-27/store-server/tree/master/docs/api.md)
+[接口文档](https://github.com/hai-27/store-server/blob/master/docs/API.md)
 
 ## 运行项目
 ```
