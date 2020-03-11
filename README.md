@@ -6,6 +6,10 @@
 
 本项目前后端分离，这是项目的后端，前端请移步[vue-store](https://github.com/hai-27/vue-store)。
 
+## 接口文档
+
+[接口文档](https://github.com/hai-27/store-server/tree/master/docs/api.md)
+
 ## 运行项目
 ```
 1. Clone project
