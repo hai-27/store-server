@@ -3,16 +3,18 @@
  * @Author: hai-27
  * @Date: 2020-02-07 16:51:58
  * @LastEditors: hai-27
- * @LastEditTime: 2020-03-04 22:26:03
+ * @LastEditTime: 2020-03-27 15:36:01
  */
 create database storeDB;
 use storeDB;
 create table users(
   user_id int primary key auto_increment,
-  userName char (20) not null unique,
-  password char (20) not null,
+  userName char (40) not null unique,
+  password char (40) not null,
   userPhoneNumber char(11) null
 );
+-- ALTER TABLE users MODIFY COLUMN userName char (40);
+-- ALTER TABLE users MODIFY COLUMN password char (40);
 -- insert into users
 -- values(null, 'admin', '123456', '13580018623');
 create table carousel(
