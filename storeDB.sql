@@ -13,8 +13,8 @@ create table users(
   password char (40) not null,
   userPhoneNumber char(11) null
 );
--- ALTER TABLE users MODIFY COLUMN userName char (40);
--- ALTER TABLE users MODIFY COLUMN password char (40);
+-- ALTER TABLE users MODIFY COLUMN userName char (40) not null unique;
+-- ALTER TABLE users MODIFY COLUMN password char (40)  not null;
 -- insert into users
 -- values(null, 'admin', '123456', '13580018623');
 create table carousel(
