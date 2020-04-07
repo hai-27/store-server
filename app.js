@@ -2,7 +2,7 @@
  * @Author: hai-27
  * @Date: 2020-02-07 16:51:56
  * @LastEditors: hai-27
- * @LastEditTime: 2020-04-07 23:27:09
+ * @LastEditTime: 2020-04-07 23:40:51
  */
 const Koa = require('koa');
 const KoaStatic = require('koa-static');
@@ -18,8 +18,8 @@ const error = require('./app/middleware/error');
 app.use(error);
 
 // 为静态资源请求重写url
-const RewriteUrl = require('./app/middleware/RewriteUrl');
-app.use(RewriteUrl);
+const rewriteUrl = require('./app/middleware/rewriteUrl');
+app.use(rewriteUrl);
 // 使用koa-static处理静态资源
 app.use(KoaStatic(staticDir));
 
