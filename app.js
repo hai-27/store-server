@@ -2,7 +2,7 @@
  * @Author: hai-27
  * @Date: 2020-02-07 16:51:56
  * @LastEditors: hai-27
- * @LastEditTime: 2020-03-04 22:29:53
+ * @LastEditTime: 2020-04-07 22:30:39
  */
 const Koa = require('koa');
 const KoaStatic = require('koa-static');
@@ -37,30 +37,7 @@ app.use(async (ctx, next) => {
 app.use(KoaStatic(staticDir));
 
 // session
-let store = {
-  storage: {},
-  set (key, session) {
-    this.storage[key] = session;
-  },
-  get (key) {
-    return this.storage[key];
-  },
-  destroy (key) {
-    delete this.storage[key];
-  }
-}
-let CONFIG = {
-  key: 'koa:session',
-  maxAge: 86400000,
-  autoCommit: true,
-  overwrite: true,
-  httpOnly: true,
-  signed: true,
-  rolling: false,
-  renew: false,
-  sameSite: null,
-  store
-}
+const CONFIG = require('./app/middleware/session');
 app.keys = ['session app keys'];
 app.use(Session(CONFIG, app));
 
