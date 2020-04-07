@@ -2,7 +2,7 @@
  * @Author: hai-27
  * @Date: 2020-02-07 16:51:56
  * @LastEditors: hai-27
- * @LastEditTime: 2020-04-07 23:23:00
+ * @LastEditTime: 2020-04-07 23:27:09
  */
 const Koa = require('koa');
 const KoaStatic = require('koa-static');
@@ -18,12 +18,8 @@ const error = require('./app/middleware/error');
 app.use(error);
 
 // 为静态资源请求重写url
-app.use(async (ctx, next) => {
-  if (ctx.url.startsWith('/public')) {
-    ctx.url = ctx.url.replace('/public', '');
-  }
-  await next();
-});
+const RewriteUrl = require('./app/middleware/RewriteUrl');
+app.use(RewriteUrl);
 // 使用koa-static处理静态资源
 app.use(KoaStatic(staticDir));
 
