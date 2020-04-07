@@ -3,10 +3,10 @@
  * @Author: hai-27
  * @Date: 2020-02-19 16:11:18
  * @LastEditors: hai-27
- * @LastEditTime: 2020-02-25 22:36:58
+ * @LastEditTime: 2020-04-07 22:53:07
  */
 const Router = require('koa-router');
-const shoppingCartController = require('../controllers/shoppingCartController')
+const shoppingCartController = require('../../controllers/shoppingCartController')
 
 let shoppingCartRouter = new Router();
 
