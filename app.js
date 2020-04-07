@@ -2,7 +2,7 @@
  * @Author: hai-27
  * @Date: 2020-02-07 16:51:56
  * @LastEditors: hai-27
- * @LastEditTime: 2020-04-07 22:30:39
+ * @LastEditTime: 2020-04-07 22:44:18
  */
 const Koa = require('koa');
 const KoaStatic = require('koa-static');
@@ -42,18 +42,8 @@ app.keys = ['session app keys'];
 app.use(Session(CONFIG, app));
 
 // 判断是否登录
-app.use(async (ctx, next) => {
-  if (ctx.url.startsWith('/user/')) {
-    if (!ctx.session.user) {
-      ctx.body = {
-        code: '401',
-        msg: '用户没有登录，请登录后再操作'
-      }
-      return;
-    }
-  }
-  await next();
-});
+const isLogin = require('./app/middleware/isLogin');
+app.use(isLogin);
 
 app.use(async (ctx, next) => {
   ctx.state.user = ctx.session.user;
