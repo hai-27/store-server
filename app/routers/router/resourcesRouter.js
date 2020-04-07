@@ -6,7 +6,7 @@
  * @LastEditTime: 2020-02-25 22:36:30
  */
 const Router = require('koa-router');
-const resourcesController = require('../controllers/resourcesController')
+const resourcesController = require('../../controllers/resourcesController')
 
 let resourcesRouter = new Router();
 

@@ -2,7 +2,7 @@
  * @Author: hai-27
  * @Date: 2020-02-07 16:51:56
  * @LastEditors: hai-27
- * @LastEditTime: 2020-04-07 22:44:18
+ * @LastEditTime: 2020-04-07 22:56:31
  */
 const Koa = require('koa');
 const KoaStatic = require('koa-static');
@@ -66,21 +66,9 @@ app.use(KoaBody({
   }
 }));
 
-const userRouter = require('./app/router/userRouter');
-const resourcesRouter = require('./app/router/resourcesRouter');
-const productRouter = require('./app/router/productRouter');
-const shoppingCartRouter = require('./app/router/shoppingCartRouter');
-const orderRouter = require('./app/router/orderRouter');
-const collectRouter = require('./app/router/collectRouter');
-app.use(userRouter.routes());
-app.use(resourcesRouter.routes());
-app.use(productRouter.routes());
-app.use(shoppingCartRouter.routes());
-app.use(orderRouter.routes());
-app.use(collectRouter.routes());
-
-app.use(userRouter.allowedMethods());
-
+// 使用路由中间件
+const Routers = require('./app/routers');
+app.use(Routers.routes()).use(Routers.allowedMethods());
 
 app.listen(Port, () => {
   console.log(`服务器启动在${ Port }端口`);

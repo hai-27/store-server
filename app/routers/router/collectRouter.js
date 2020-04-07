@@ -3,10 +3,10 @@
  * @Author: hai-27
  * @Date: 2020-03-04 22:28:01
  * @LastEditors: hai-27
- * @LastEditTime: 2020-03-04 23:17:00
+ * @LastEditTime: 2020-04-07 22:52:36
  */
 const Router = require('koa-router');
-const collectController = require('../controllers/collectController')
+const collectController = require('../../controllers/collectController')
 
 let collectRouter = new Router();
 
