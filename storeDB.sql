@@ -16,7 +16,7 @@ create table users(
 -- ALTER TABLE users MODIFY COLUMN userName char (40) not null unique;
 -- ALTER TABLE users MODIFY COLUMN password char (40)  not null;
 -- insert into users
--- values(null, 'admin', '123456', '13580018623');
+-- values(null, 'admin', '123456', '100861001010000');
 create table carousel(
   carousel_id int primary key auto_increment,
   imgPath char (50) not null,
