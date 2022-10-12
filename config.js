@@ -15,8 +15,9 @@ module.exports = {
   dbConfig: {
     connectionLimit: 10,
     host: 'localhost',
+    port: 33061,
     user: 'root',
-    password: '',
-    database: 'storeDB'
+    password: '123456',
+    database: 'demo1'
   }
 }

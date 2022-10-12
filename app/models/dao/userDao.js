@@ -8,19 +8,12 @@
 const db = require('./db.js');
 
 module.exports = {
-  // 连接数据库根据用户名和密码查询用户信息
-  Login: async (userName, password) => {
-    const sql = 'select * from users where userName = ? and password = ?';
-    return await db.query(sql, [userName, password]);
+  login: async (usercode, password) => {
+    const sql = 'select * from user where usercode = ? and password = ?';
+    return await db.query(sql, [usercode, password]);
   },
-  // 连接数据库根据用户名查询用户信息
-  FindUserName: async (userName) => {
-    const sql = 'select * from users where userName = ?';
-    return await db.query(sql, [userName]);
-  },
-  // 连接数据库插入用户信息
-  Register: async (userName, password) => {
-    const sql = 'insert into users values(null,?,?,null)';
-    return await db.query(sql, [userName, password]);
+  getUserList: async () => {
+    const sql = 'select * from user';
+    return await db.query(sql);
   }
 }

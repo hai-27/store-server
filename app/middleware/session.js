@@ -8,6 +8,7 @@
 let store = {
   storage: {},
   set (key, session) {
+    console.log(this.storage);
     this.storage[key] = session;
   },
   get (key) {
@@ -19,14 +20,13 @@ let store = {
 }
 let CONFIG = {
   key: 'koa:session',
-  maxAge: 86400000,
+  maxAge: 600000,
   autoCommit: true,
   overwrite: true,
   httpOnly: true,
   signed: true,
   rolling: false,
   renew: false,
-  sameSite: null,
   store
 }
 

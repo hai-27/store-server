@@ -32,10 +32,10 @@ app.use(Session(CONFIG, app));
 const isLogin = require('./app/middleware/isLogin');
 app.use(isLogin);
 
-app.use(async (ctx, next) => {
+/* app.use(async (ctx, next) => {
   ctx.state.user = ctx.session.user;
   await next();
-});
+}); */
 
 // 处理请求体数据
 const koaBodyConfig = require('./app/middleware/koaBodyConfig');

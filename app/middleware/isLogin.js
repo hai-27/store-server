@@ -7,6 +7,7 @@
  */
 module.exports = async (ctx, next) => {
   if (ctx.url.startsWith('/user/')) {
+    console.log(ctx.session.user);
     if (!ctx.session.user) {
       ctx.body = {
         code: '401',
