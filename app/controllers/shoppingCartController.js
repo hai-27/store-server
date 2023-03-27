@@ -98,7 +98,7 @@ module.exports = {
           return;
         }
       } catch (error) {
-        reject(error);
+        throw(error)
       }
     } else {
       //不存在则添加
@@ -120,7 +120,7 @@ module.exports = {
           return;
         }
       } catch (error) {
-        reject(error);
+        throw(error)
       }
     }
 
@@ -156,7 +156,7 @@ module.exports = {
           return;
         }
       } catch (error) {
-        reject(error);
+        throw(error)
       }
     } else {
       // 不存在则返回信息
@@ -221,7 +221,7 @@ module.exports = {
           return;
         }
       } catch (error) {
-        reject(error);
+        throw(error)
       }
     } else {
       //不存在则返回信息

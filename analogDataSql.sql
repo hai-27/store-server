@@ -301,3 +301,14 @@ values
 insert into product_picture
 values
   (null, 35, "public/imgs/phone/picture/protectingShell-Mix-3-1.jpg", null);
+
+
+  insert into carousel
+values
+  (null, "public/imgs/cms_2.jpg", 2);
+	insert into carousel
+values
+  (null,  "public/imgs/cms_3.jpg", 3);
+	insert into carousel
+values
+  (null,  "public/imgs/cms_4.jpg", 4);

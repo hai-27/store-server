@@ -27,7 +27,7 @@ db.query = function (sql, params) {
         // 释放连接
         connection.release();
         if (error) {
-          reject(error);
+          throw(error)
           return;
         }
         resolve(results);

@@ -211,7 +211,7 @@ module.exports = {
         msg: '未知错误，注册失败'
       }
     } catch (error) {
-      reject(error);
+      throw(error)
     }
   }
 };
