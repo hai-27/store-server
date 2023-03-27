@@ -2,15 +2,15 @@
  * @Description: 订单模块数据持久层
  * @Author: hai-27
  * @Date: 2020-02-24 16:36:19
- * @LastEditors: hai-27
- * @LastEditTime: 2020-02-27 14:31:56
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-03-22 21:36:45
  */
 const db = require('./db.js');
 
 module.exports = {
   // 连接数据库获取所有的订单id
   GetOrderGroup: async (user_id) => {
-    let sql = 'select order_id from orders where user_id = ? group by order_id desc';
+    let sql = 'select order_id from orders where user_id = ? order by order_id desc';
     return await db.query(sql, user_id);
   },
   // 连接数据库获取所有的订单详细信息

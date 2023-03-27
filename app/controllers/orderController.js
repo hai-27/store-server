@@ -2,13 +2,15 @@
  * @Description: 订单模块控制器
  * @Author: hai-27
  * @Date: 2020-02-24 16:35:22
- * @LastEditors: hai-27
- * @LastEditTime: 2020-02-27 14:32:16
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-03-22 21:43:42
  */
 const orderDao = require('../models/dao/orderDao');
 const shoppingCartDao = require('../models/dao/shoppingCartDao');
 const productDao = require('../models/dao/productDao');
 const checkLogin = require('../middleware/checkLogin');
+const receiveDao = require('../models/dao/receiveDao');
+
 
 module.exports = {
   /**
@@ -68,7 +70,7 @@ module.exports = {
    * @param {Object} ctx
    */
   AddOrder: async (ctx) => {
-    let { user_id, products } = ctx.request.body;
+    let { user_id, products, receiveInfo, billInfo } = ctx.request.body;
     // 校验用户是否登录
     if (!checkLogin(ctx, user_id)) {
       return;
@@ -87,9 +89,11 @@ module.exports = {
       data.push(...product);
     }
 
+    
+
     try {
       // 把订单信息插入数据库
-      const result = await orderDao.AddOrder(products.length, data);
+      let result = await orderDao.AddOrder(products.length, data);
 
       // 插入成功
       if (result.affectedRows == products.length) {
@@ -106,21 +110,28 @@ module.exports = {
             code: '002',
             msg: '购买成功,但购物车没有更新成功'
           }
-          return;
         }
 
+      }
+
+      console.log('处理插入收获信息')
+      const {firstName, lastName, address, city, province, country, postalCode, phone, email} = receiveInfo
+      result = await receiveDao.AddReceiveInfo(...[user_id, firstName, lastName, address, city, province, country, postalCode, phone, email, timeTemp])
+
+      if (result.affectedRows === 1) {
         ctx.body = {
           code: '001',
           msg: '购买成功'
         }
-      } else {
-        ctx.body = {
-          code: '004',
-          msg: '购买失败,未知原因'
-        }
+        return;
+      }
+
+      ctx.body = {
+        code: '004',
+        msg: '购买失败,未知原因'
       }
     } catch (error) {
-      reject(error);
+      throw(error)
     }
   }
 }

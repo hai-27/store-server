@@ -2,8 +2,8 @@
  * @Description: 建库建表语句
  * @Author: hai-27
  * @Date: 2020-02-07 16:51:58
- * @LastEditors: hai-27
- * @LastEditTime: 2020-03-27 15:36:01
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-03-21 22:37:43
  */
 create database storeDB;
 use storeDB;
@@ -80,4 +80,36 @@ create table collect(
   collect_time bigint not null,
   constraint FK_collect_user_id foreign key (user_id) references users (user_id),
   constraint FK_collect_id foreign key (product_id) references product (product_id)
+);
+
+create table receive_info(
+  id int primary key auto_increment,
+	user_id int not null,
+  first_name char (200),
+	last_name char (200),
+	address char (200),
+	city char (200),
+	province char (200),
+	country char (200),
+	postalCode char (200),
+	phone char (200),
+  email char (200),
+	create_time bigint not null,
+	constraint foreign key (user_id) references users (user_id)
+);
+
+create table bill_info(
+  id int primary key auto_increment,
+	user_id int not null,
+  first_name char (200),
+	last_name char (200),
+	address char (200),
+	city char (200),
+	province char (200),
+	country char (200),
+	postalCode char (200),
+	phone char (200),
+  email char (200),
+	create_time bigint not null,
+	constraint foreign key (user_id) references users (user_id)
 );
